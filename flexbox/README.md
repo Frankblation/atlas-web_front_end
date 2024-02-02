@@ -26,7 +26,7 @@ To successfully complete this project, make sure to read or watch the following 
 8. [Flexplorer](http://bennettfeely.com/flexplorer/)
 9. [CSS Flexible Box Layout Module Level 1](https://www.w3.org/TR/css-flexbox-1/)
 10. [FLEX: A simple visual cheatsheet for flexbox](https://flexbox.help/)
-    
+
 ## Learning Objectives
 
 By the end of this project, you are expected to be able to explain to anyone, without the help of Google:
