@@ -696,6 +696,13 @@
 
     }*/
 
+    .card-work .card-title {
+        text-align: center;
+        margin: 0;
+        height: 100%;
+        position: relative;
+      }
+
     .card-work .card-title a:focus {
       display: block;
       padding: 2rem 1rem 0 1rem;
