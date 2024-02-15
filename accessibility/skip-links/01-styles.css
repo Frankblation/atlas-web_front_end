@@ -191,14 +191,14 @@
   }
 
   .off-screen{
-    left:-100px;
+    left:-100vw;
     position: absolute;
   }
 
   .skip-link {
     background: var(--color-black);
     color: var(--color-white);
-    left: -100vw;
+    left: 0;
     padding: .7rem;
     position: fixed;
     opacity: 0;
