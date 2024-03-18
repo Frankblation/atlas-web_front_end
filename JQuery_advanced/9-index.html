@@ -42,7 +42,7 @@
         $('<p>').html(snippet).appendTo(listItem);
     }
 
-    function queryWikipedia(search, offset = 0) {
+    function queryWikipedia(search, offset = 1) {
         displayLoading(true);
         var apiUrl = 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=' + search + '&origin=*' + '&sroffset=' + offset;
 
