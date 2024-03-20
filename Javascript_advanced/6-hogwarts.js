@@ -1,4 +1,4 @@
-const studentHogwarts = (() => {
+function StudentHogwarts() {
     let privateScore = 0;
     let name = null;
 
@@ -20,9 +20,9 @@ const studentHogwarts = (() => {
             return `${name}: ${privateScore}`;
         }
     };
-})();
+}
 
-const harry = Object.create(studentHogwarts);
+const harry = new StudentHogwarts();
 harry.setName("Harry");
 harry.rewardStudent();
 harry.rewardStudent();
@@ -30,7 +30,7 @@ harry.rewardStudent();
 harry.rewardStudent();
 console.log(harry.getScore());
 
-const draco = Object.create(studentHogwarts);
+const draco = new StudentHogwarts();
 draco.setName("Draco");
 draco.rewardStudent();
 draco.penalizeStudent();
