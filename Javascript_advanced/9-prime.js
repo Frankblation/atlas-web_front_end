@@ -4,7 +4,7 @@ function countPrimeNumbers() {
 
     for (let num = 2; num <= 100; num++) {
         let isPrime = true;
-\
+
         for (let i = 2; i <= Math.sqrt(num); i++) {
             if (num % i === 0) {
                 isPrime = false;
@@ -19,8 +19,9 @@ function countPrimeNumbers() {
 
     const end = performance.now();
     const executionTime = end - start;
-    console.log(`Execution time of printing countPrimeNumbers was ${executionTime.toFixed(16)} milliseconds.`);
+    console.log(`Execution time of printing countPrimeNumbers was ${executionTime.toFixed(3)} milliseconds.`);
     return count;
 }
+
 
 countPrimeNumbers();
