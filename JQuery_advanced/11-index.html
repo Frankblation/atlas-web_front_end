@@ -45,12 +45,10 @@
             )
         );
 
-        // Clicking on the label selects the input text
         $('label').click(function() {
             $(this).next().focus();
         });
 
-        // Pressing enter on input text submits the form
         $('input[type="text"], textarea').keypress(function(e) {
             if (e.which == 13) {
                 $(this).closest('form').submit();
