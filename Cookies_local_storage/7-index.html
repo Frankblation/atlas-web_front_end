@@ -6,13 +6,6 @@
     <title>Shopping Cart</title>
 </head>
 <body>
-    <h2>Available products:</h2>
-    <ul id="available-products">
-    </ul>
-
-    <h2>Your cart:</h2>
-    <div id="cart"></div>
-
     <script>
         const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
 
@@ -48,39 +41,60 @@
         }
 
         function createStore() {
-            const availableProductsList = document.getElementById("available-products");
+            const availableProductsList = document.createElement("ul");
             availableItems.forEach(item => {
                 const li = document.createElement("li");
                 li.textContent = item;
                 li.addEventListener("click", () => addItemToCart(item));
                 availableProductsList.appendChild(li);
             });
+            document.body.appendChild(document.createElement("h2")).textContent = "Available products:";
+            document.body.appendChild(availableProductsList);
         }
 
         function displayCart() {
+            let cartDiv = document.getElementById("cart");
+            if (!cartDiv) {
+                cartDiv = document.createElement("div");
+                cartDiv.id = "cart";
+                document.body.appendChild(document.createElement("h2")).textContent = "Your cart:";
+                document.body.appendChild(cartDiv);
+            } else {
+                cartDiv.innerHTML = '';
+            }
+
+            updateCart();
+        }
+
+        function updateCart() {
             const cartDiv = document.getElementById("cart");
-            cartDiv.innerHTML = "<div></div>";
-            const cartList = cartDiv.querySelector("div");
+            const cartList = document.createElement('ul');
 
             const cart = getCartFromStorage();
             if (Object.keys(cart).length === 0) {
-                cartList.textContent = "Your cart is empty";
+                const emptyCartMessage = document.createElement("div");
+                emptyCartMessage.textContent = "Your cart is empty";
+                cartDiv.appendChild(emptyCartMessage);
             } else {
                 for (const item in cart) {
                     const listItem = document.createElement("li");
                     listItem.textContent = `${item} x ${cart[item]}`;
+
                     const removeButton = document.createElement("button");
                     removeButton.textContent = "(remove)";
                     removeButton.addEventListener("click", () => removeItemFromCart(item));
                     listItem.appendChild(removeButton);
+
                     cartList.appendChild(listItem);
                 }
             }
 
-            const clearButton = document.createElement("button");
-            clearButton.textContent = "Clear my cart";
-            clearButton.addEventListener("click", clearCart);
-            cartDiv.insertBefore(clearButton, cartList);
+            const clearButton = document.createElement('button');
+            clearButton.textContent = 'Clear my cart';
+            clearButton.addEventListener('click', clearCart);
+
+            cartDiv.appendChild(cartList);
+            cartDiv.appendChild(clearButton);
         }
     </script>
 </body>
