@@ -14,7 +14,6 @@
 </head>
 <body>
 <script>
-    // Check if session storage is available
     function isSessionStorageSupported() {
         try {
             sessionStorage.setItem('test', 'test');
@@ -24,17 +23,13 @@
             return false;
         }
     }
-
-    // Array of available items
     const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
 
-    // Function to add item to cart
     function addItemToCart(item) {
         sessionStorage.setItem(item, 'true');
         displayCart();
     }
 
-    // Function to create store
     function createStore() {
         const ul = document.createElement('ul');
         availableItems.forEach(item => {
@@ -46,7 +41,6 @@
         document.body.appendChild(ul);
     }
 
-    // Function to display cart
     function displayCart() {
         const cartItems = Object.keys(sessionStorage);
         if (cartItems.length === 0) return;
@@ -58,8 +52,6 @@
         p.textContent = message;
         document.body.appendChild(p);
     }
-
-    // Check if session storage is supported
     if (!isSessionStorageSupported()) {
         alert("Sorry, your browser does not support Web storage. Try again with a better one");
     } else {
