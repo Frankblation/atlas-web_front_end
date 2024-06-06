@@ -591,7 +591,7 @@
     }
 
     .post-meta-list strong {
-        color: point to the variable color-primary;
+        color: var(--section-tagline-color);
         font-size:  var(--font-size-small);
         text-transform: uppercase;
         display: block;
