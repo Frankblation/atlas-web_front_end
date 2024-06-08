@@ -666,6 +666,7 @@
   }
   
   .card-work .card-title a {
+    opacity: 0; 
     display: block;
     text-decoration: none;
     padding-top: 45%;
@@ -704,9 +705,10 @@
     }
   
     .card-work .card-title a {
+      opacity: 0;
       display: block;
       padding: 2rem 1rem 0 1rem;
-      opacity: 0;
+     
     }
   
 
