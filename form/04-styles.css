@@ -711,6 +711,7 @@
     }
 
     ::placeholder {
+        
         font-style: italic;
-        font-size: var(--font-size-small);
+        font-size: 1.2rem;
       }
