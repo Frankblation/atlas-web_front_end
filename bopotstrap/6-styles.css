@@ -38,8 +38,10 @@ a {
     border: #BC1340 o !important;
   }
 
-  .button:hover {
-    
+  .button:hover,
+  .button:focus
+ {
+    background-color: #E0003C !important;
   }
   
 
