@@ -10,5 +10,4 @@ function welcome(firstName, lastName) {
 
 welcome('Holberton', 'School');
 
-
 alert(fullName);
