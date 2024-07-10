@@ -1,21 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "white nights",
-      "author": "Fyodor Dostoevsky"
-    },
-    {
-      "id": 2,
-      "title": "",
-      "author": "hey"
-    },
-    {
-      "id": 3,
-      "title": "WHITENIGHTS",
-      "author": "Fyodor Dostoevsky"
-    }
-  ],
+  "posts": [],
   "comments": [
     {
       "id": "1",
