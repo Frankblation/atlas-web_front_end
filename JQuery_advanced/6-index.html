@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-6</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <style>
+        .remove-cell {
+            background-color: orange;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<script type="application/javascript">
+    $(document).ready(function() {
+        createFamilyTree();
+        createForm();
+    });
+
+    function createFamilyTree() {
+        $('body').prepend(
+            $('<table>').append(
+                $('<thead>').append(
+                    $('<tr>').append(
+                        $('<th>').text('Firstname'),
+                        $('<th>').text('Lastname'),
+                        $('<th>').text('')
+                    )
+                ),
+                $('<tbody>')
+            )
+        );
+    }
+
+    function addNewMember(firstName, lastName, position) {
+        var newRow = $('<tr>');
+        $('<td>').text(firstName).appendTo(newRow);
+        $('<td>').text(lastName).appendTo(newRow);
+        $('<td>').text('(x)').addClass('remove-cell').appendTo(newRow).click(function() {
+            $(this).parent('tr').remove();
+        });
+
+        if (position === 'before') {
+            $('tbody').prepend(newRow);
+        } else {
+            $('tbody').append(newRow);
+        }
+    }
+
+    function createForm() {
+        $('body').prepend(
+            $('<form>').submit(function(e) {
+                e.preventDefault();
+                var firstName = $('input[type="text"]:first').val();
+                var lastName = $('input[type="text"]:nth-of-type(2)').val();
+                var position = $('select').val();
+                addNewMember(firstName, lastName, position);
+            }).append(
+                $('<input>').attr('type', 'text'),
+                $('<input>').attr('type', 'text'),
+                $('<select>').append(
+                    $('<option>').attr('value', 'before').text('Before'),
+                    $('<option>').attr('value', 'after').text('After')
+                ),
+                $('<input>').attr('type', 'submit')
+            )
+        );
+    }
+</script>
+
+</body>
+</html>

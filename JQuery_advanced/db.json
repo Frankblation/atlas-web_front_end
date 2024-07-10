@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "white nights",
+      "author": "Fyodor Dostoevsky"
+    },
+    {
+      "id": 2,
+      "title": "",
+      "author": "hey"
+    },
+    {
+      "id": 3,
+      "title": "WHITENIGHTS",
+      "author": "Fyodor Dostoevsky"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
