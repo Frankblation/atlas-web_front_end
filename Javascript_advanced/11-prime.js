@@ -16,10 +16,14 @@ function countPrimeNumbers() {
 
 // Measure execution time for 100 calls with setTimeout
 let startTime = performance.now();
-setTimeout(function() {
+function countPrimeNumbers100() {
     for (let i = 0; i < 100; i++) {
         countPrimeNumbers();
     }
-    let endTime = performance.now();
+  
+}
+
+const to = performance.now();
+setTimeout(countPrimeNumbers100,0); 
+let endTime = performance.now();
     console.log(`Execution time of calculating prime numbers 100 times was ${endTime - startTime} milliseconds.`);
-}, 0);

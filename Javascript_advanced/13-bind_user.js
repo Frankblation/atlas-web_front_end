@@ -6,7 +6,7 @@ var user = {
     lastName: "Johns",
     location: "Netherlands",
     occupation: "Engineer"
-};
+}; 
 
 
 function logWelcomeUser(welcomeString) {

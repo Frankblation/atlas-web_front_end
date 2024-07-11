@@ -9,4 +9,4 @@ var roomDimensions = {
 var boundGetArea = roomDimensions.getArea.bind(roomDimensions);
 
 // test me
-console.log(boundGetArea()); 
+console.log(boundGetArea());  // Should return 5000

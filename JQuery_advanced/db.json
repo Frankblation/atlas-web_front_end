@@ -1,5 +1,21 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "fd",
+      "author": "fffff",
+      "id": "2"
+    },
+    {
+      "id": "21",
+      "title": "",
+      "author": "Fyodor Dostoevsky"
+    }
+  ],
   "comments": [
     {
       "id": "1",

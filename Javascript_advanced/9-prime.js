@@ -11,6 +11,7 @@ function countPrimeNumbers() {
     for (let i = 2; i <= 100; i++) {
         if (isPrime(i)) count++;
     }
+    console.log(count);
     return count;
 }
 
