@@ -18,3 +18,6 @@ function queryWikipedia(callback) {
     };
     xhr.send();
 }
+
+// To test
+queryWikipedia(createElement);
