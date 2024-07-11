@@ -18,4 +18,3 @@ var bindLogWelcomeUser = logWelcomeUser.bind(user);
 
 // test me
 bindLogWelcomeUser('Hello');
-Task 14: Simple Callback
