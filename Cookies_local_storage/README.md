@@ -1,1 +1,0 @@
-Cookies Local Storage
